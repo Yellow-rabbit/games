@@ -6,10 +6,16 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./ticTacToe.component.scss']
 })
 export class TicTacToeComponent implements OnInit {
-
+  tiles = [
+    ['', '', ''],
+    ['', '', ''],
+    ['', '', ''],
+  ];
   constructor() { }
-
   ngOnInit() {
   }
-
+  handleClick(columnIndex, rowIndex) {
+    console.log(columnIndex, rowIndex);
+    this.tiles[columnIndex][rowIndex] = 'x';
+  }
 }
