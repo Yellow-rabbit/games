@@ -1,3 +1,15 @@
-<p>
-  tic-tac-toe works!
-</p>
+<div id="main">
+  <div class="gameContainer">
+    <div class="handlers">
+    </div>
+    <div class="gameContent">
+      <ng-container *ngFor="let ligne of tiles; index as columnIndex">
+        <div class="ligne">
+          <ng-container *ngFor="let tile of ligne; index as rowIndex">
+            <div class="tile" (click)="handleClick(columnIndex, rowIndex)">{{tile}}</div>
+          </ng-container>
+        </div>
+      </ng-container>
+    </div>
+  </div>
+</div>
